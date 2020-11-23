@@ -1,0 +1,12 @@
+Our objective is to create a program that reads a list of urls from a file and then it should
+download those urls and index all of the words that are in those urls so that we wind up with a list
+of all the words and frequency counts for each word.
+
+TDD
+Read a file containing a list of urls
+Read a download url page
+Search for the next word on page
+Add word to the database
+Repeat for all words found on page
+print a page report containing each word and frequency of found
+Repeat for the remaining urls

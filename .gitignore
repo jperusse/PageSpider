@@ -1,0 +1,5 @@
+/.pytest_cache
+/.vscode
+/Exercise Files
+/venv
+/__pycache__
