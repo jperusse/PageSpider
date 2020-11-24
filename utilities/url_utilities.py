@@ -7,12 +7,13 @@ from bs4 import BeautifulSoup
 
 def load_urls_from_file(file_path: str):
     urls = []
+    
     try:
         with open(file_path) as f:
             urls.extend(f.readlines())
             return urls
     except FileNotFoundError:
-        return urls
+        return "File Not Found"
 
 
 def load_page(url: str):
