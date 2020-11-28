@@ -1,3 +1,4 @@
+import os
 import re
 import string
 from urllib.request import urlopen
@@ -7,13 +8,12 @@ from bs4 import BeautifulSoup
 
 def load_urls_from_file(file_path: str):
     urls = []
-    
-    try:
-        with open(file_path) as f:
-            urls.extend(f.readlines())
-            return urls
-    except FileNotFoundError:
-        return "File Not Found"
+    if not os.path.exists(file_path):
+        raise Exception(f"Missing File: {file_path}")
+
+    f = open(file_path, 'r')
+    urls.extend(f.readlines())
+    return urls
 
 
 def load_page(url: str):

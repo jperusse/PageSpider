@@ -1,9 +1,27 @@
-Our objective is to create a program that reads a list of urls from a file and then it should
-download those urls and index all of the words that are in those urls so that we wind up with a list
-of all the words and frequency counts for each word.
+Our objective is to create a program that reads a list of urls from a file and then it should download those urls and index all of the words that are in those urls so that we wind up with a list of all the words and frequency counts for each word.
 
 TDD
-Read a file containing a list of urls
+- read a file
+    - Not Found: returns "File not Found"
+    - Found: read all lines
+        - no lines found: returns "No lines found"
+        - 1 or more lines: returns True
+        - returns Number of lines
+- Assume file contains urls.
+    - Load page from url1
+    - Load page from url2
+    - url is not valid returns "URL not found"
+    - Valid url not reachable: "URL not found"
+- Scrape loaded page for words
+    - page should be valid html
+- Parse html to remove everything except words found
+    - no words found returns "No words found"
+    - return all words and their counts
+- Save words to database
+    - database not available: returns "DB <name> not available"
+    - returns True
+
+    
 Read a download url page
 Search for the next word on page
 Add word to the database
