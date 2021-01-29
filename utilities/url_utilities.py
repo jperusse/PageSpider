@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 def load_urls_from_file(file_path: str):
     urls = []
     if not os.path.exists(file_path):
-        raise Exception(f"Missing File: {file_path}")
+        raise Exception(FileNotFoundError)
 
     f = open(file_path, 'r')
     urls.extend(f.readlines())
