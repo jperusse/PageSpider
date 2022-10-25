@@ -11,3 +11,4 @@ test/utilities/__pycache__/test_url_utilities.cpython-39-pytest-6.1.2.pyc
 utilities/__pycache__/__init__.cpython-39.pyc
 utilities/__pycache__/database_utilities.cpython-39.pyc
 utilities/__pycache__/url_utilities.cpython-39.pyc
+*.pyc
